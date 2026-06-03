@@ -64,7 +64,7 @@ export default function ShareDialog({
       const result = await response.json();
 
       setShareLink(`${window.location.origin}/share/${result.data.shareId}`);
-      setLinkGenerated((prev) => !prev);
+      setLinkGenerated?.((prev) => !prev);
       toast.success("Share link generated");
     } catch (error) {
       console.error(error);
