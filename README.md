@@ -88,7 +88,7 @@ https://orbitra-assignment-seven.vercel.app
 ### Clone Repository
 
 ```bash
-git clone https://github.com/your-username/orbitra-ai.git
+https://github.com/Abhi005shek/orbitra-assignment.git
 ```
 
 ---
