@@ -39,9 +39,23 @@ import { toast } from "sonner";
 
 const BASE_URL = import.meta.env.VITE_API_URL!;
 
+interface ItineraryData {
+  _id: string;
+  shareId: string;
+  document: {
+    originalName: string;
+    mimeType: string;
+    fileUrl: string;
+  };
+  title: string;
+  destination: string;
+  createdAt: string;
+  content: string;
+}
+
 export default function ItineraryTable() {
   const token = useAuthStore((state) => state.token);
-  const [itineraries, setItineraries] = useState([]);
+  const [itineraries, setItineraries] = useState<ItineraryData[]>([]);
   const [isOpen, setIsOpen] = useState(false);
   const [shareId, setShareId] = useState("");
   const [itineraryId, setItineraryId] = useState("");
